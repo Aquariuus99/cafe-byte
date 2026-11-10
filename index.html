@@ -4,17 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Café Byte</title>
-  <meta name="description" content="Café Byte: cafeteria do bairro com cafés especiais, bolos caseiros,
-  pedidos online e entrega.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
-  <link rel="stylesheet" href="css/estilo.css">
   <style>
-/*===== Café Byte: estilos ===== */
+/* ===== Café Byte: estilos ===== */
 
 /* Fonte Poppins, do Google Fonts  */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-/*Paleta de cores do site: mude aqui e o site todo muda */
+/* Paleta de cores do site: mude aqui e o site todo muda */
 :root {
   --cor-fundo: #fbf6f1;
   --cor-texto: #3b2a20;
@@ -25,7 +21,7 @@
   --cor-suave: #f1e3d3;
 }
 
-/* Todos os elementos: medidas mais previsiveis */
+/* Todos os elementos: medidas mais previsíveis */
 * {
   box-sizing: border-box;
 }
@@ -52,8 +48,6 @@ img {
   max-width: 100%;
   height: auto;
   border-radius: 12px;
-  display: block;
-  margin: 0 auto;
 }
 
 /* Cabeçalho e menu */
@@ -124,7 +118,10 @@ img {
 	text-align: center;
 	padding: 24px;
 }
-  
+  /* ===== Layout ===== */
+
+/* Cabeçalho: logo à esquerda, menu à direita, sempre visível */
+
 .topo {
   display: flex;
   align-items: center;
@@ -140,6 +137,8 @@ img {
   margin-left: auto;
   }
     
+/* Destaque: tudo centralizado */
+
 .destaque {
   min-height: 70vh;
   display: flex;
@@ -156,6 +155,9 @@ img {
    max-width: 700px;
    margin: 8px 0 16px;
    }
+
+/* Sobre: foto e texto lado a lado */
+
  .duas-colunas {
    display: grid;
    grid-template-columns: 1fr 1fr;
@@ -163,6 +165,9 @@ img {
    align-items: center;
    }
      
+
+/* Cards do cardápio: grade que se ajusta sozinha */
+
  .cards {
    display: grid;
    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -213,7 +218,7 @@ img {
   }
 }
   
-/* ===== Saudação e aviso de aberto/ fechado ==== */
+/* ===== Saudação e aviso de aberto/fechado ===== */
 
 .saudacao {
   font-size: 1.2rem;
@@ -238,9 +243,9 @@ img {
   color: #991b1b;
 }
   
-  /* ==== Modo escuro e menu do celular ==== */
+/* ===== Modo escuro e menu do celular ===== */
   
-  /* No modo escuro, só trcamos os valores das variaveis */
+/* No modo escuro, só trocamos os valores das variáveis */
   
   body.escuro {
     --cor-fundo: #1c1512;
@@ -264,7 +269,7 @@ img {
    padding: 4px 10px;
    cursor: pointer;
  }
- /* O botão ☰ fica escondido o computador */
+ /* O botão ☰ fica escondido no computador */
  .botao-menu {
    display: none;
  }
@@ -396,7 +401,7 @@ img {
   margin: 0 0 20px;
   padding: 8px 20px;
   background-color: var(--cor-cartao);
-  border-radius: 8px;
+  border-radius: 999px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
@@ -414,12 +419,12 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Ao pular para uma seção, deixa espaço para o cabeçalh fixo */
+/* Ao pular para uma seção, deixa espaço para o cabeçalho fixo */
 section {
   scroll-margin-top: 80px;
 }
 
-/* Contorno bem visivel para quem navega pelo teclado (Tab) */
+/* Contorno bem visível para quem navega pelo teclado (Tab) */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible {
@@ -435,139 +440,143 @@ input:focus-visible {
   </style>
 </head>
 <body>
-<meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Café Byte</title>
-  <meta name="description" content="Café Byte: cafeteria do bairro com cafés especiais, bolos caseiros,
-  pedidos online e entrega.">
-  <link rel="icon" ="="" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg'
-  viewBox='0 0 100 100'&lt;text y='.9em' font-size='90'&gt;☕&lt;/text&gt;&lt;/svg&gt;">
+  <meta name="description" content="Café Byte: cafeteria do bairro com cafés especiais, bolos caseiros, pedidos online e entrega.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
   <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
   
+  <!-- Café Byte: projeto do curso Web do Zero -->
+  <header class="topo">
+    <a href="#inicio" class="logo"> ☕ Café Byte</a>
+    <nav id="menu" class="menu">
+      <a href="#sobre">Sobre</a> 
+      <a href="#cardapio">Cardápio</a>
+      <a href="#pedido">Pedido</a> 
+      <a href="#contato">Contato</a>
+    </nav>
+    <button id="botao-tema" class="botao-tema" aria-label="Mudar tema">🌙</button>
+    <button id="botao-menu" class="botao-menu" aria-label="Abrir menu">☰</button>
+  </header>
+  
+  <main>
+    <section id="inicio" class="destaque">
+      <p id="saudacao" class="saudacao">Olá! Que bom ter você por aqui.</p>
+      <h1> Café quentinho, código fresquinho. </h1>
+      <p>Cafés especiais, bolos caseiros e um cantinho com Wi-Fi para estudar.</p>
+      <p id="status" class="status"></p>
+      <div id="clima" class="clima">⏳ Consultando o clima...</div>
+      <a href="#cardapio" class="botao">Ver cardápio</a>
+    </section> 
+    <section id="sobre" class="secao">
+      <h2>Sobre nós</h2>
+      <div class="duas-colunas">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/500px-A_small_cup_of_coffee.JPG" alt="Xicara de café com pires e colher" width="500">
+        <div>
+          <p> O <strong>Café Byte</strong> nasceu da vontade de juntar duas paixões:
+            um bom café e boas ideias. Aqui você encontra grãos selecionados, receitas
+            caseiras e um ambiente tranquilo para estudar, trabalhar ou conversar.
+          </p>
+          <ul>
+            <li> Grãos de pequenos produtores</li>
+            <li> Bolos feitos todo os dias de manhã</li>
+            <li> Wi-Fi grátis e tomadas nas mesas</li>
+          </ul>
+        </div> 
+      </div>
+      <h3> Horário de funcionamento</h3>
+      <table class="horarios">
+         <tr>
+           <th>Dia</th>
+           <th>Horário</th>
+         </tr>
+         <tr>
+           <td>Segunda a sexta</td>
+           <td>7h às 20h</td>
+         </tr>
+         <tr>
+           <td>Sábado</td>
+           <td>8h às 18h</td>
+         </tr>
+         <tr>
+           <td>Domingo</td>
+           <td>Fechado</td>
+         </tr>
+      </table>
+    </section>
 
-<!-- Café Byte: projeto do curso Web do Zero -->
-<header class="topo">
-  <a href="#inicio" class="logo"> ☕ Café Byte</a>
-  <nav id="menu" class="menu">
-    <a href="#sobre">Sobre</a> 
-    <a href="#cardapio">Cardápio</a> 
-    <a href="#contato">Contato</a>
-    <a href="#pedido">Pedido</a> 
-  </nav>
-  <button id="botao-tema" class="botao-tema" aria-label="Mudar tema">🌙</button>
-  <button id="botao-menu" class="botao-menu" aria-label="Abrir menu">☰</button>
-</header>
-<main>
-  <section id="inicio" class="destaque">
-    <p id="saudacao" class="saudacao">Olá! Que bom ter você por aqui.</p>
-    <h1> Café quentinho, código fresquinho. </h1>
-    <p>Cafés especiais, bolos caseiros e um cantinho com Wi-Fi para estudar.</p>
-    <p id="status" class="status"></p>
-    <div id="clima" class="clima">⏳ Consultando o clima...</div>
-    <a href="#cardapio" class="botao">Ver cardápio</a>
-  </section> 
-  <section id="sobre" class="secao">
-    <h2>Sobre nós</h2>
-    <div class="duas-colunas">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/500px-A_small_cup_of_coffee.JPG" alt="Xicara de café com pires e colher" width="500">
-      <div>
-        <p>
-          O <strong>Café Byte</strong> nasceu da vontade de juntar duas paixões:
-          um bom café e boas ideias. Aqui você encontra grãos selecionados, receitas
-          caseiras e um ambiente tranquilo para estudar, trabalhar ou conversar.
-        </p>
-        <ul>
-          <li> Grãos de pequenos produtores</li>
-          <li> Bolos feitos todos os dias de manhã</li>
-          <li> Wi-Fi grátis e tomadas nas mesas</li>
-        </ul>
-      </div> 
-    </div>
-  <h3> Horário de funcionamento</h3>
-  <table class="horarios">
-   <tbody><tr>
-      <th>Dia</th>
-      <th>Horário</th>
-   </tr>
-   <tr>
-      <td>Segunda a Sexta</td>
-      <td>7h às 20h</td>
-   </tr>
-   <tr>
-      <td>Sábado</td>
-      <td>8h às 18h</td>
-   </tr>
-   <tr>
-      <td>Domingo</td>
-      <td>Fechado</td>
-   </tr>
-  </tbody></table>
-</section>
-
-  <section id="cardapio" class="secao">
-    <h2>Cardápio</h2>
-    <p>Escolha uma categoria ou procure pelo nome: </p>
-<div class="filtros">
-    <input type="search" id="busca" class="busca" placeholder="🔍 Buscar no cardápio...">
-    <button class="filtro ativo" data-categoria="todos">Todos</button>
-    <button class="filtro" data-categoria="bebida">Bebidas</button>
-    <button class="filtro" data-categoria="doce">Doces</button>
-    <button class="filtro" data-categoria="salgado">Salgados</button>
-</div>
-<div id="lista-produtos" class="cards"></div>
-  </section>
-  <section id="pedido" class="secao">
-    <h2> Meu pedido</h2>
-    <ul id="itens-pedido" class="itens-pedido"></ul>
-    <p class="total">Total: <strong id="total"> R$ 0,00</strong></p>
+    <section id="cardapio" class="secao">
+      <h2>Cardápio</h2>
+      <p>Escolha uma categoria ou procure pelo nome: </p>
+      <div class="filtros">
+       <input type="search" id="busca" class="busca" placeholder="🔍 Buscar no cardápio...">
+       <button class="filtro ativo" data-categoria="todos">Todos</button>
+       <button class="filtro" data-categoria="bebida">Bebidas</button>
+       <button class="filtro" data-categoria="doce">Doces</button>
+       <button class="filtro" data-categoria="salgado">Salgados</button>
+      </div>
+      <div id="lista-produtos" class="cards"></div>
+    </section>
     
-    <h3> Entrega</h3>
-    <form id="form-entrega" class="form">
-      <label for="cep">CEP</label>
-      <input id="cep" placeholder="00000-000" maxlength="9" required="">
-      <p id="msg-cep" class="mensagem"></p>
-      <label for="endereco">Endereço</label>
-      <input id="endereco" placeholder="Rua, bairro e cidade" maxlength="9" required="">
-      <label for="numero">Número</label>
-      <input id="numero" placeholder="Ex.: 123" maxlength="9" required="">
-      <button type="submit" class="botao">Finalizar pedido</button>
-    </form>
-    <p id="msg-pedido" class="mensagem"></p>  
-  </section>
-  <section id="contato" class="secao">
-    <h2>Contato</h2>  
-    <p>📍 Rua das Flores, 123, Centro</p>
-    <p>📞 <a href="tel:+5511999999999">(11) 99999-9999</a></p>
-    <p>✉️ <a href="mailto:contato@cafebyte.com.br">contato@cafebyte.com.br</a></p>
-    <p>📷 <a href="https://www.instagram.com/" target="_blank">Siga a gente no Instagram</a></p>
-    <iframe class="mapa" title="Mapa do Café Byte" src="https://openstreetmap.org/export/embed.html?bbox=-46.640,-23.556,-46.626,-23.545&amp;layer=mapnik&amp;marker=-23.5505,-46.6333"></iframe>
-  
-</section></main>
+    <section id="pedido" class="secao">
+      <h2> Meu pedido</h2>
+      <ul id="itens-pedido" class="itens-pedido"></ul>
+      <p class="total">Total: <strong id="total"> R$ 0,00</strong></p>
+    
+      <h3> Entrega</h3>
+      <form id="form-entrega" class="form">
+        <label for="cep">CEP</label>
+        <input id="cep" placeholder="00000-000" maxlength="9" required="">
+        <p id="msg-cep" class="mensagem"></p>
+        <label for="endereco">Endereço</label>
+        <input id="endereco" placeholder="Rua, bairro e cidade"  required="">
+        <label for="numero">Número</label>
+        <input id="numero" placeholder="Ex.: 123" required="">
+        <button type="submit" class="botao">Finalizar pedido</button>
+      </form>
+      <p id="msg-pedido" class="mensagem"></p>  
+    </section>
+    
+    <section id="contato" class="secao">
+      <h2>Contato</h2>  
+      <p>📍 Rua das Flores, 123, Centro</p>
+      <p>📞 <a href="tel:+5511999999999">(11) 99999-9999</a></p>
+      <p>✉️ <a href="mailto:contato@cafebyte.com.br">contato@cafebyte.com.br</a></p>
+      <p>📷 <a href="https://www.instagram.com/" target="_blank">Siga a gente no Instagram</a></p>
+      <iframe class="mapa" title="Mapa do Café Byte" src="https://www.openstreetmap.org/export/embed.html?bbox=-46.640,-23.556,-46.626,-23.545&layer=mapnik&marker=-23.5505,-46.6333"></iframe>
+    
+    </section>
+  </main>
 
-<footer class="rodape">
-  <p>© <span id="ano">2026</span> Café Byte - Feito por Thay Domingos no Curso Web do Zero</p>
-  <a href="#inicio">Voltar ao topo ↑</a>
-</footer>
+  <footer class="rodape">
+    <p>&copy; <span id="ano">2026</span> Café Byte - Feito por Thay Domingos no curso Web do Zero</p>
+    <a href="#inicio">Voltar ao topo &uarr;</a>
+  </footer>
+  <script src="js/script.js"></script>
+<body>
+</html>
 
 <script>
 //===== Café Byte: script =====
-// ----- Saudaçãoe "aberto agora" -----
+// ----- Saudação e "aberto agora" -----
+
 console.log( 'O script do Café Byte foi carregado!');
 const agora = new Date();
-const hora = agora.getHours();
-const diaDaSemana = agora.getDay();
+const hora = agora.getHours();      // de 0 a 23
+const diaDaSemana = agora.getDay(); // 0 = domingo, 6 = sábado
 
 console.log('Agora são ' + hora + ' horas. Dia da semana: ' + diaDaSemana);
 
-let preco = 6.5;
-console.log('3 cafés = ' + preco * 3);
-
-function saudacao (h) {
-  if ( h < 6) {
-    return 'Madrugada? Um café forte cai bem! ⛅';
-  } else if ( h < 12) {
+function saudacao(h) {
+  if (h < 12) {
     return 'Bom dia! ☀️';
-  } else if ( h < 18) {
+  } else if (h < 18) {
     return 'Boa tarde! 🌤️';
   } else {
     return 'Boa noite! 🌙';
@@ -578,11 +587,11 @@ document.querySelector('#saudacao').textContent = saudacao(hora);
 
 function estaAberto (dia, h) {
   if ( dia === 0) {
-    return false;
+    return false; // domingo: fechado
   } else if ( dia === 6) {
-    return h >= 8 && h < 18;
+    return h >= 8 && h < 18; // sábado: 8h às 18h
   } else {
-    return h >= 7 && h < 20;
+    return h >= 7 && h < 20; // segunda a sexta: 7h às 20h
   }
 }
 
@@ -596,7 +605,7 @@ if (estaAberto (diaDaSemana, hora) ) {
   avisoStatus.classList.add('fechado-agora');
 }
 
-// ------ Modo escuro ---- 
+// ----- Modo escuro -----
 
 const botaoTema = document.querySelector('#botao-tema');
 
@@ -614,6 +623,8 @@ botaoTema.addEventListener('click', function () {
   localStorage.setItem('cafebyte-tema',document.body.classList.contains('escuro'));
 });
 
+// ----- Menu do celular -----
+
 const botaoMenu = document.querySelector('#botao-menu');
 const menu = document.querySelector('#menu');
 
@@ -627,7 +638,7 @@ menu.addEventListener('click', function () {
   menu.classList.remove('mostrar');
 });
 
-// ----- Cardápio: os dados ----
+// ----- Cardápio: os dados -----
 
 const produtos = [
     { id: 1, nome: 'Café expresso', categoria: 'bebida', preco: 6.5,
@@ -638,14 +649,14 @@ const produtos = [
         emoji:'🍫', descricao: 'Cremoso, perfeito para dias frios.'},
     { id: 4, nome: 'Suco de laranja', categoria: 'bebida', preco: 8,
         emoji:'🍊', descricao: 'Natural e geladinho.'},
-    { id: 5, nome: 'Bolo de Cenoura', categoria: 'doce', preco: 8.5,
-        emoji:'🍰', descricao: 'Com cobertura de cholate.'},
+    { id: 5, nome: 'Bolo de cenoura', categoria: 'doce', preco: 8.5,
+        emoji:'🍰', descricao: 'Com cobertura de chocolate.'},
     { id: 6, nome: 'Cookie', categoria: 'doce', preco: 6,
         emoji:'🍪', descricao: 'Gotas de chocolate e casquinha crocante.'},
     { id: 7, nome: 'Pão de queijo', categoria: 'salgado', preco: 5,
         emoji:'🧀', descricao: 'Quentinho, saído do forno.'},
     { id: 8, nome: 'Misto quente', categoria: 'salgado', preco: 12,
-        emoji:'🥪', descricao: 'Pão de forma, queijo e presunto.'},
+        emoji:'🥪', descricao: 'Pão de forma, queijo e presunto.'}
 ];
 
 console.log('Produtos no cardápio: ' + produtos.length);
@@ -710,7 +721,7 @@ filtros.forEach(function (botao) {
 const itensPedido = document.querySelector('#itens-pedido');
 const totalPedido = document.querySelector('#total');
 
-// Lê o pedido salvo. Se ainda não existir, começa com um lista vazia.
+// Lê o pedido salvo. Se ainda não existir, começa com uma lista vazia.
 let pedido = JSON.parse(localStorage.getItem('cafebyte-pedido')) || [];
 
 function salvarPedido() {
@@ -718,11 +729,11 @@ function salvarPedido() {
 }
 
 function mostrarPedido() {
-  itensPedido.innerHTML = ' ';
+  itensPedido.innerHTML = '';
   let total = 0;
   
   if (pedido.length === 0) {
-    itensPedido.innerHTML = '<li> Seu pedido está vazio. Escolha algo no cardápio!</li>';
+    itensPedido.innerHTML = '<li>Seu pedido está vazio. Escolha algo no cardápio!</li>';
   }
   
   pedido.forEach(function (item, posicao) {
@@ -768,7 +779,7 @@ listaProdutos.addEventListener('click', function (evento) {
   }
 });
 
-// botão "-": tira um unidade, e o item todo quando chega a zero
+// Botão "-": tira uma unidade, e o item todo quando chega a zero
 itensPedido.addEventListener('click', function (evento) {
  const posicao = evento.target.dataset.posicao;
    if (posicao !== undefined) {
@@ -788,7 +799,7 @@ const formEntrega = document.querySelector('#form-entrega');
 const msgPedido = document.querySelector('#msg-pedido');
 
 formEntrega.addEventListener('submit', function (evento) {
-  evento.preventDefault(); // não deixar a página recarregar
+  evento.preventDefault(); // não deixa a página recarregar
   
   if (pedido.length === 0) {
     msgPedido.textContent = 'Seu pedido está vazio. Escolha algo no cardápio!';
@@ -797,8 +808,7 @@ formEntrega.addEventListener('submit', function (evento) {
   
   const endereco = document.querySelector('#endereco').value;
   const numero = document.querySelector('#numero').value;
-  msgPedido.textContent = `✅ Pedido recebido! Total: ${totalPedido.textContent}.
-  Vamos entregar em ${endereco}, nº ${numero}.`;
+  msgPedido.textContent = `✅ Pedido recebido! Total: ${totalPedido.textContent}. Vamos entregar em ${endereco}, nº ${numero}.`;
   
   pedido = [];
   salvarPedido();
@@ -806,7 +816,7 @@ formEntrega.addEventListener('submit', function (evento) {
   formEntrega.reset();
 });
 
-//lembra o tema escolhido na última visita
+// Lembra o tema escolhido na última visita.
 if(localStorage.getItem('cafebyte-tema') === 'true') {
   document.body.classList.add('escuro');
   atualizarIconeTema();
@@ -831,9 +841,9 @@ try {
   if (temperatura < 20) {
     sugestao = 'Friozinho! Que tal um chocolate quente? 🍫';
   } else if (temperatura < 27) {
-    sugestao = 'Clima perfeito para um cappuccino. 🥛';
+    sugestao = 'Clima perfeito para um cappuccino. ☕';
   } else {
-    sugestao = 'Calorão! Um suco de laranja galadinhocai bem. 🍊';
+    sugestao = 'Calorão! Um suco de laranja geladinho cai bem. 🍊';
   }
 
   caixaClima.textContent = `🌡️ Agora faz ${temperatura}°C por aqui. ${sugestao}`;
@@ -870,7 +880,7 @@ async function buscarCep() {
     }
 
     campoEndereco.value = `${dados.logradouro}, ${dados.bairro}, ${dados.localidade} - ${dados.uf}`;
-    msgCep.textContent = '✔ Endereço encontrado! Agora digite o número.';
+    msgCep.textContent = '📍 Endereço encontrado! Agora digite o número.';
     document.querySelector('#numero').focus();
   } catch (erro) {
     msgCep.textContent = 'Não foi possível consultar o CEP. Verifique a internet.';
