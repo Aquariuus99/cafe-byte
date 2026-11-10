@@ -3,10 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Café Byte</title>
-  <meta name="description" content="Café Byte: cafeteria do bairro com cafés especiais, bolos caseiros, pedidos online e entrega.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
-	
+  <title>Hub Café</title>
   <style>
 /* ===== Café Byte: estilos ===== */
 /* Fonte Poppins, do Google Fonts  */
@@ -14,13 +11,13 @@
 
 /* Paleta de cores do site: mude aqui e o site todo muda */
 :root {
-  --cor-fundo: #fbf6f1;
-  --cor-texto: #3b2a20;
-  --cor-cartao: #ffffff;
-  --cor-titulo: #4b2e1f;
-  --cor-cafe: #4b2e1f;
-  --cor-destaque: #d9822b;
-  --cor-suave: #f1e3d3;
+  --cor-fundo: #F5EFE6;
+  --cor-texto: #4A3428;
+  --cor-cartao: #FFFFFF;
+  --cor-titulo: #5C4033;
+  --cor-cafe: #5C4033;
+  --cor-destaque: #B7865B;
+  --cor-suave: #E2D2BF;
 }
 
 /* Todos os elementos: medidas mais previsíveis */
@@ -55,12 +52,12 @@ img {
 /* Cabeçalho e menu */
 .topo {
   background-color: var(--cor-cafe);
-  padding: 16px 24px;
+  padding: 15px 25px;
 }
 
 .logo {
 	color: #ffffff;
-	font-size: 1.4rem;
+	font-size: 2rem;
 	font-weight: 700;
 	text-decoration: none;
 }
@@ -250,11 +247,11 @@ img {
 /* No modo escuro, só trocamos os valores das variáveis */
   
   body.escuro {
-    --cor-fundo: #1c1512;
-    --cor-texto: #f3e9e2;
-    --cor-cartao: #2a201b;
-    --cor-titulo: #f2b56b;
-    --cor-suave: #3d2f27;
+    --cor-fundo: #211914;
+    --cor-texto: #F0E5D8;
+    --cor-cartao: #33251D;
+    --cor-titulo: #E8D2BA;
+    --cor-suave: #594234;
   }
   
  body {
@@ -442,9 +439,9 @@ input:focus-visible {
   </style>
 </head>
 <body>
-  <!-- Café Byte: projeto do curso Web do Zero -->
+<!-- Café Byte: projeto do curso Web do Zero -->
   <header class="topo">
-    <a href="#inicio" class="logo"> ☕ Café Byte</a>
+    <a href="#inicio" class="logo"> ☕ Hub Café</a>
     <nav id="menu" class="menu">
       <a href="#sobre">Sobre</a> 
       <a href="#cardapio">Cardápio</a>
@@ -458,8 +455,8 @@ input:focus-visible {
   <main>
     <section id="inicio" class="destaque">
       <p id="saudacao" class="saudacao">Olá! Que bom ter você por aqui.</p>
-      <h1> Café quentinho, código fresquinho. </h1>
-      <p>Cafés especiais, bolos caseiros e um cantinho com Wi-Fi para estudar.</p>
+      <h1>Café, criatividade e boas ideias.</h1>
+      <p>Passa aqui para abastecer a mente!</p>
       <p id="status" class="status"></p>
       <div id="clima" class="clima">⏳ Consultando o clima...</div>
       <a href="#cardapio" class="botao">Ver cardápio</a>
@@ -467,11 +464,11 @@ input:focus-visible {
     <section id="sobre" class="secao">
       <h2>Sobre nós</h2>
       <div class="duas-colunas">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/500px-A_small_cup_of_coffee.JPG" alt="Xicara de café com pires e colher" width="500">
+        <img src="https://yorkemporium.co.uk/cdn/shop/articles/best-coffee-for-milk-drinks_d736a89d-0776-4710-9541-4e9270bd32cc.png?v=1777362139" alt="Xicara de café com pires e colher" width="500">
         <div>
-          <p> O <strong>Café Byte</strong> nasceu da vontade de juntar duas paixões:
-            um bom café e boas ideias. Aqui você encontra grãos selecionados, receitas
-            caseiras e um ambiente tranquilo para estudar, trabalhar ou conversar.
+          <p> Na <strong>Hub Café</strong>, unimos grãos de alta qualidade a um ambiente que estimula a mente. 
+          Criamos o espaço ideal para acolher mentes inquietas, conversas inspiradoras e projetos que saem do papel. 
+          Seja para focar no trabalho, criar ou pausar a rotina, aqui é o seu ponto de encontro com a criatividade.
           </p>
           <ul>
             <li> Grãos de pequenos produtores</li>
@@ -482,7 +479,7 @@ input:focus-visible {
       </div>
       <h3> Horário de funcionamento</h3>
       <table class="horarios">
-         <tr>
+         <tbody><tr>
            <th>Dia</th>
            <th>Horário</th>
          </tr>
@@ -498,7 +495,7 @@ input:focus-visible {
            <td>Domingo</td>
            <td>Fechado</td>
          </tr>
-      </table>
+      </tbody></table>
     </section>
 
     <section id="cardapio" class="secao">
@@ -525,7 +522,7 @@ input:focus-visible {
         <input id="cep" placeholder="00000-000" maxlength="9" required="">
         <p id="msg-cep" class="mensagem"></p>
         <label for="endereco">Endereço</label>
-        <input id="endereco" placeholder="Rua, bairro e cidade"  required="">
+        <input id="endereco" placeholder="Rua, bairro e cidade" required="">
         <label for="numero">Número</label>
         <input id="numero" placeholder="Ex.: 123" required="">
         <button type="submit" class="botao">Finalizar pedido</button>
@@ -539,15 +536,16 @@ input:focus-visible {
       <p>📞 <a href="tel:+5511999999999">(11) 99999-9999</a></p>
       <p>✉️ <a href="mailto:contato@cafebyte.com.br">contato@cafebyte.com.br</a></p>
       <p>📷 <a href="https://www.instagram.com/" target="_blank">Siga a gente no Instagram</a></p>
-      <iframe class="mapa" title="Mapa do Café Byte" src="https://www.openstreetmap.org/export/embed.html?bbox=-46.640,-23.556,-46.626,-23.545&layer=mapnik&marker=-23.5505,-46.6333"></iframe>
+      <iframe class="mapa" title="Mapa do Café Byte" src="https://www.openstreetmap.org/export/embed.html?bbox=-46.640,-23.556,-46.626,-23.545&amp;layer=mapnik&amp;marker=-23.5505,-46.6333"></iframe>
     
     </section>
   </main>
 
   <footer class="rodape">
-    <p>&copy; <span id="ano">2026</span> Café Byte - Feito por Thay Domingos no curso Web do Zero</p>
-    <a href="#inicio">Voltar ao topo &uarr;</a>
+    <p>© <span id="ano">2026</span> Café Byte - Feito por Thay Domingos no curso Web do Zero</p>
+    <a href="#inicio">Voltar ao topo ↑</a>
   </footer>
+
 <script>
 //===== Café Byte: script =====
 // ----- Saudação e "aberto agora" -----
